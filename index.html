@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <title>Unit Converter Create By Rishi_❤️</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>UNIT CONVERTER</h1>
+        <h2>CREATE BY.
+            MR.BHALERAO_RUSHIKESH_RAMLAL_❤️<h2>
+        
+
+        <form name="property_form">
+            <span>
+                <select class="select-property" name="the_menu" size=1
+                    onChange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)">
+                </select>
+            </span>
+        </form>
+
+        <div class="row">
+            <div class="col">
+                <form name="form_A" onSubmit="return false">
+                    <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0"
+                        onKeyUp="CalculateUnit(document.form_A, document.form_B)">
+                    <span>
+                        <select name="unit_menu" onChange="CalculateUnit(document.form_B, document.form_A)">
+                        </select>
+                    </span>
+                </form>
+            </div>
+
+            <div class="col">
+                <form name="form_B" onSubmit="return false">
+                    <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0"
+                        onkeyup="CalculateUnit(document.form_B, document.form_A)">
+                    <span>
+                        <select name="unit_menu" onChange="CalculateUnit(document.form_A, document.form_B)">
+                        </select>
+                    </span>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
